@@ -1,0 +1,9 @@
+hosts: projeto-final
+
+tasks:
+ - name: creat file
+   copy: 
+     dest: /home/ubuntu/index.html
+     content: <h1>VASCO DA GAMA! S2</h1>
+ - name: creat server
+   shell: "nohup busybox httpd -f -p 8080 &"
